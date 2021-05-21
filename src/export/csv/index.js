@@ -46,20 +46,24 @@ export default (fileName, { csv, list }) => {
   }
 }
 
-export function csvData(config) {
+export function csvData(config, {
+  buildingDisplay = ({ key, value, config }) => {
+  }
+}) {
   config.csv = config.csv || {}
   config.csv.fields = []
   for (const key in config.items) {
+    let value = config.items[key].key;
     if (config.items[key].filter) {
       config.csv.isCast = true
-      config.csv.cast[config.items[key].key] = {
+      config.csv.cast[value] = {
         filter: config.items[key].filter,
         enums: config.items[key].enums
       }
     }
     config.csv.fields.push({
-      value: config.items[key].key,
-      label: config.items[key].display || i18n.tc(`content.${config.items[key].key}`)
+      value: value,
+      label: config.items[key].display || buildingDisplay({ config, key, value })
     })
   }
 }

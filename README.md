@@ -3,6 +3,8 @@ js相关公共控件。
 
 ```javascript
 import L from 'lc-js-components'
+
+//导出csv
 L.export.csv.execute('文件名',{
  csv:{
    "fields": [

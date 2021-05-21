@@ -1,6 +1,6 @@
 {
   "name": "lc-js-components",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "js相关公共控件.",
   "main": "dist/index.js",
   "scripts": {
