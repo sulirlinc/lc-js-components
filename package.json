@@ -1,6 +1,6 @@
 {
   "name": "lc-js-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "js相关公共控件.",
   "main": "dist/index.js",
   "scripts": {
@@ -14,8 +14,7 @@
     "url": "https://github.com/sulirlinc/lc-js-components"
   },
   "keywords": [
-    "js-md5",
-    "axios"
+    "json2csv"
   ],
   "dependencies": {
     "@babel/core": "^7.14.3",
